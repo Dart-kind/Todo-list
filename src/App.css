@@ -1,0 +1,128 @@
+.header {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  
+}
+.header__logo img {
+  width: 40px;
+  margin-right: 20px;
+}
+
+.header__title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.header__button {
+  border-radius: 15px;
+  padding: 10px 10px 10px 10px;
+  color: #596bbd;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #596bbd;
+  min-width: 80px;
+  margin-left: 670px;
+}
+.header__button:hover {
+  background: #596bbd;
+  color: #ffffff;
+}
+.wrapper {
+  padding: 90px;
+}
+.container {
+  background-color: #fdfdfd;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px gray;
+}
+
+.content__progress {
+  background-color: lightgray;
+  border-radius: 20px;
+  height: 15px;
+  width: 300px;
+}
+
+.content__progress-done {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(to left, #0546e0, #1172f9, #4892f9);
+  box-shadow: 0 5px 5px -6px #0546e0, 0 3px 7px #1172f9;
+  border-radius: 20px;
+  color: red;
+  height: 100%;
+  width: 50%;
+  transition: 1s ease 0.3s;
+}
+
+.content__progress-done span {
+  position: absolute;
+  right: 0;
+  color: #e6e6f0;
+}
+.content {
+  padding: 5px 20px 20px 20px;
+}
+
+.content__list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  box-shadow: 5px 5px 15px -8px;
+  border-radius: 10px;
+  height: 70px;
+}
+.content__img img {
+  display: flex;
+  width: 20px;
+  margin: 0 10px 0 15px;
+}
+
+.content__text {
+  font-size: 15px;
+  font-weight: 500;
+  width: 350px;
+}
+
+.content__btn {
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+  background-color: #ffffff;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.content__btn-edit {
+  color: #79a283;
+  border: 1px solid #79a283;
+}
+
+.content__btn-edit:hover {
+  background-color: #abd2b1;
+  color: #ffffff;
+}
+
+.content__btn-delete {
+  color: #fda59b;
+  border: 1px solid #e65a4e;
+}
+
+.content__btn-delete:hover {
+  background-color: #e65a4e;
+  color: #ffffff;
+}
+
+.popup__button {
+  justify-content: center;
+  align-items: center;
+  width: 650px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #596bbd;
+  border-radius: 15px;
+  cursor: pointer;
+}

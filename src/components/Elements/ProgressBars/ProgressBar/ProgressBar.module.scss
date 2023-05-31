@@ -1,0 +1,27 @@
+.content__progress {
+  background-color: lightgray;
+  border-radius: 20px;
+  height: 15px;
+  width: 300px;
+  margin-right: 190px;
+}
+
+.content__done {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(to left, #0546e0, #1172f9, #4892f9);
+  box-shadow: 0 5px 5px -6px #0546e0, 0 3px 7px #1172f9;
+  border-radius: 20px;
+  color: red;
+  height: 100%;
+ 
+  transition: 1s ease 0.3s;
+
+  span {
+    position: absolute;
+    right: 0;
+    color: #e6e6f0;
+  }
+}
