@@ -1,7 +1,8 @@
 import React from 'react';
 import ListItem from './ListItem';
 
-const List = ({ posts, remove }) => {
+const List = ({ posts, remove }) => {  
+
   if (!posts.length) {
     return (
       <div>
@@ -9,6 +10,7 @@ const List = ({ posts, remove }) => {
       </div>
     );
   }
+  
   return (
     <div>
       {posts.map((post, index) => (
