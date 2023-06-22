@@ -1,8 +1,8 @@
 import React from 'react';
 import MyInput from './MyInput/MyInput';
 
-
-const Edit = ({ note, onInputChange, onSaveClick, onCancelClick }) => {
+const Edit = ({ note, onInputChange, onSaveClick, onCancelClick, post, setNote }) => {
+  console.log(post);
   return (
     <div>
       <MyInput type="text" value={note} onChange={onInputChange} />
@@ -11,6 +11,5 @@ const Edit = ({ note, onInputChange, onSaveClick, onCancelClick }) => {
     </div>
   );
 };
-
 
 export default Edit;

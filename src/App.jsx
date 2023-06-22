@@ -6,18 +6,24 @@ import MyModal from './components/MyModal/MyModal';
 import Modal from './components/modal/Modal';
 import ButtonAdd from './components/Elements/Buttons/ButtonAdd';
 import List from './components/List';
+
 function App() {
   const [posts, setPosts] = React.useState([]);
   const [modal, setModal] = React.useState(false);
+
   const createPost = (newPost) => {
     setPosts([...posts, newPost]);
+  
 
     setModal(false);
   };
+
   const removePost = (post) => {
-    setPosts(posts.filter(el => el !== post));
+    setPosts(posts.filter((el) => el !== post));
   };
 
+
+  
   return (
     <div className="wrapper">
       <div className="container">
@@ -27,7 +33,7 @@ function App() {
         </div>
 
         <MyModal visible={modal} setVisible={setModal}>
-          <Modal create={createPost} />
+          <Modal visible={modal} setVisible={setModal} create={createPost} />
         </MyModal>
         <div className="content">
           <div className="content__lists">

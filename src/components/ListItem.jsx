@@ -5,37 +5,36 @@ import ProgressBar from './Elements/ProgressBars/ProgressBar/ProgressBar';
 import ButtonEdit from './Elements/Buttons/ButtonEdit';
 import ButtonDelete from './Elements/Buttons/ButtonDelete';
 
-const List = (props) => {
+const ListItem = (props) => {
   const [note, setNote] = React.useState(props.post.title);
   const [editing, setEditing] = React.useState(false);
+  console.log(note);
+
+  const [value, setValue] = [
+    {
+      title: '',
+    },
+  ];
 
   const handleInputChange = (e) => {
     setNote(e.target.value);
   };
 
   const handleSaveClick = () => {
-    const propsArr = [props.post];
-    let filter = [...propsArr].filter((task) => task.id !== props.post.id);
-    let update = [...filter, note];
-    console.log(update);
     setEditing(false);
-    setNote(update);
+    setNote(note);
   };
+
   const handleCancelClick = () => {
-    if (props.post.title == note) {
-      console.log(1);
-
-      setNote(note);
-    } else {
-      console.log(2);
-      let newNote = note;
-      console.log(newNote);
-      setNote(newNote);
-    }
     setEditing(false);
+    setNote(save.title);
   };
 
-  return (  
+  const setUpdateData = () => {
+    setEditing(true);
+  };
+
+  return (
     <div>
       {editing ? (
         <Edit
@@ -54,8 +53,7 @@ const List = (props) => {
           <h3 className="content__text">{note}</h3>
           <ProgressBar value={props.post.progress} />
           <div className="content__btn">
-            <ButtonEdit onClick={() => setEditing(true)} />
-
+            <ButtonEdit onClick={(e) => setNote({ ...props, title: e.target.value })} />
             <ButtonDelete onClick={() => props.remove(props.post)} />
           </div>
         </div>
@@ -64,4 +62,4 @@ const List = (props) => {
   );
 };
 
-export default List;
+export default ListItem;
